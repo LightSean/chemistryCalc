@@ -1,0 +1,14 @@
+python -OO -m PyInstaller main.py ^
+	--clean ^
+        -D ^
+        --name "Chemistry Calculator" ^
+        --add-data icons/;images ^        
+	    -i images/main_icon.ico ^
+	    -c ^
+        -w
+
+
+pyinstaller --clean --onefile --windowed --add-data "Cdata/PeriodicTableJSON.json;Cdata" --add-data "icons/mainIcon.png;icons" --icon="icon.ico" main.py
+
+
+pyinstaller --onefile main.spec
